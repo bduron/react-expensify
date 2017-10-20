@@ -10,12 +10,14 @@ import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
+import './firebase/firebase';
+import './playground/promise';
 
 const store = configureStore();
 
-store.dispatch(addExpense( { description: 'Water bill', amount: 1000, createdAt: 1997 }));
-store.dispatch(addExpense( { description: 'Gas bill', amount: 50, createdAt: 2005 } ));
-store.dispatch(addExpense( { description: 'Rent', amount: 4500 } ));
+//store.dispatch(addExpense( { description: 'Water bill', amount: 1000, createdAt: 1997 }));
+//store.dispatch(addExpense( { description: 'Gas bill', amount: 50, createdAt: 2005 } ));
+//store.dispatch(addExpense( { description: 'Rent', amount: 4500 } ));
 //store.dispatch(setStartDate(-10000));
 //store.dispatch(setEndDate(1000000));
 
