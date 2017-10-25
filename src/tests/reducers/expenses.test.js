@@ -86,3 +86,17 @@ test('Setting up EDIT_EXPENSE - invalid ID', () => {
 
 	expect(state).toEqual(expenses);
 });
+
+
+test('should SET EXPENSES', () => {
+
+	const action = {
+		type: 'SET_EXPENSES',
+		expenses
+	};
+
+	const state = expensesReducer(expenses, action);
+
+	expect(state).toEqual(expenses);
+});
+

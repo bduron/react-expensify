@@ -1,4 +1,4 @@
-import { ADD_EXPENSE, REMOVE_EXPENSE, EDIT_EXPENSE } from '../actions/actions';
+import { ADD_EXPENSE, REMOVE_EXPENSE, EDIT_EXPENSE, SET_EXPENSES } from '../actions/actions';
 
 // EXPENSES REDUCER
 
@@ -17,6 +17,8 @@ export default (state = expensesReducerDefaultState, action) => {
 				else 
 					return expense;
 			});
+		case SET_EXPENSES:
+			return action.expenses;
 		default:
 			return state;
 	}
