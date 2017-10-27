@@ -11,19 +11,11 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
+import { Loading } from 'element-react';
 
 const store = configureStore();
 
-//store.dispatch(addExpense( { description: 'Water bill', amount: 1000, createdAt: 1997 }));
-//store.dispatch(addExpense( { description: 'Gas bill', amount: 50, createdAt: 2005 } ));
-//store.dispatch(addExpense( { description: 'Rent', amount: 4500 } ));
-//store.dispatch(setStartDate(-10000));
-//store.dispatch(setEndDate(1000000));
-
-
 const state = store.getState();
-const expenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(expenses);
 
 
 const jsx = (
@@ -40,9 +32,7 @@ const renderApp = () => {
 	}
 };
 
-
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
-
+ReactDOM.render(<Loading fullscreen={true} text="Loading..." />, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
